@@ -9,7 +9,19 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f3f6fb;
+    background: #f4f7fb;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* Dark mode */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .card {
+    background: #1e1e1e;
 }
 
 /* Header */
@@ -17,7 +29,7 @@ header {
     background: linear-gradient(135deg, #4f46e5, #1e3a8a);
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 header img {
@@ -25,71 +37,73 @@ header img {
     height: 150px;
     border-radius: 50%;
     border: 4px solid white;
-    margin-top: 15px;
     object-fit: cover;
-}
-
-header h1 {
-    margin: 15px 0 5px;
-    font-size: 36px;
-}
-
-header p {
-    margin: 5px 0;
-    font-size: 18px;
 }
 
 /* Sections */
 section {
-    max-width: 950px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-h2 {
-    color: #1e3a8a;
-}
-
-/* Card Style */
+/* Card */
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    margin-top: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+    background: #4f46e5;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #1e3a8a;
 }
 
 /* Certificate image */
 .cert-img {
-    width: 300px;
+    width: 280px;
     border-radius: 10px;
     margin-top: 10px;
 }
 
-/* Links */
-a {
-    color: #4f46e5;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a:hover {
-    text-decoration: underline;
+/* Dark mode button */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 /* Footer */
 footer {
+    text-align: center;
     background: #1e3a8a;
     color: white;
-    text-align: center;
     padding: 15px;
-    margin-top: 40px;
 }
 </style>
-
 </head>
 
 <body>
+
+<button class="toggle-btn" onclick="toggleDark()">🌙 Dark Mode</button>
 
 <header>
 
@@ -97,9 +111,9 @@ footer {
 
 <h1>👩‍💻 Monisha G</h1>
 
-<p>🎓 Computer Science and Engineering Student</p>
+<p id="typing"></p>
 
-<p>💡 Aspiring Software Developer</p>
+<a href="RESUME.pdf" class="btn" target="_blank">📄 View Resume</a>
 
 </header>
 
@@ -108,32 +122,23 @@ footer {
 <h2>🙋‍♀ About Me</h2>
 
 <div class="card">
-
-<p>
-I am a 2nd year Computer Science and Engineering student skilled in C, C++, SQL, and HTML.
-I am passionate about software development and building real-world projects.
-</p>
-
+I am a Computer Science and Engineering student passionate about software development and programming. I enjoy building real-world projects and improving my technical skills.
 </div>
 
 </section>
-    <section>
+
+<section>
 
 <h2>🛠 Technical Skills</h2>
 
 <div class="card">
-
-<ul>
-<li>💻 C Programming</li>
-<li>🚀 C++ (OOP & File Handling)</li>
-<li>☕ Java</li>
-<li>🌐 HTML</li>
-<li>🎨 CSS</li>
-<li>🗄 SQL</li>
-<li>🔧 Git & GitHub</li>
-
-</ul>
-
+💻 C Programming<br>
+🚀 C++<br>
+☕ Java<br>
+🌐 HTML<br>
+🎨 CSS<br>
+🗄 SQL<br>
+🔧 GitHub
 </div>
 
 </section>
@@ -144,17 +149,13 @@ I am passionate about software development and building real-world projects.
 
 <div class="card">
 
-<h3>🏦 Bank Management System</h3>
+🏦 Bank Management System
 
-<p>
-Developed using C++ and file handling. Supports account creation, deposit, withdrawal, and balance enquiry.
-</p>
+<br>
 
-<p>
-🔗 <a href="https://github.com/Monisha0503" target="_blank">
-View Project on GitHub
+<a href="https://github.com/Monisha0503" class="btn" target="_blank">
+🔗 View Project
 </a>
-</p>
 
 </div>
 
@@ -166,15 +167,13 @@ View Project on GitHub
 
 <div class="card">
 
-<h3>🐍 Basics of Python – Infosys Springboard</h3>
-
 <img src="python_certificate.jpg" class="cert-img">
 
-<p>
-📄 <a href="infoys-python.pdf" target="_blank">
-View Full Certificate
+<br>
+
+<a href="infoys-python.pdf" class="btn" target="_blank">
+📄 View Certificate
 </a>
-</p>
 
 </div>
 
@@ -186,21 +185,9 @@ View Full Certificate
 
 <div class="card">
 
-<p>📧 Email: monishagnanaprakasam4@gmail.com</p>
-
-<p>
-💻 GitHub:
-<a href="https://github.com/Monisha0503" target="_blank">
-github.com/Monisha0503
-</a>
-</p>
-
-<p>
-🔗 LinkedIn:
-<a href="https://www.linkedin.com/in/monisha-g-510a92376" target="_blank">
-View LinkedIn Profile
-</a>
-</p>
+📧 monishagnanaprakasam4@gmail.com<br>
+💻 <a href="https://github.com/Monisha0503" target="_blank">GitHub</a><br>
+🔗 <a href="https://www.linkedin.com/in/monisha-g-510a92376" target="_blank">LinkedIn</a>
 
 </div>
 
@@ -208,10 +195,30 @@ View LinkedIn Profile
 
 <footer>
 
-<p>✨ © 2026 Monisha G | Portfolio ✨</p>
+© 2026 Monisha G | Portfolio
 
 </footer>
 
+<script>
+/* Typing animation */
+let text = "Computer Science Engineering Student | Aspiring Software Developer";
+let i = 0;
+
+function typing() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 50);
+    }
+}
+
+typing();
+
+/* Dark mode toggle */
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
 </body>
 </html>
-
