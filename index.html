@@ -1,166 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Monisha G | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monisha G | Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f3f6fb;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            line-height: 1.6;
-        }
+/* Header */
+header {
+    background: linear-gradient(135deg, #4f46e5, #1e3a8a);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
 
-        header {
-            background: #1e3a8a;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-top: 15px;
+}
 
-        header h1 {
-            font-size: 40px;
-        }
+header h1 {
+    margin: 15px 0 5px;
+    font-size: 36px;
+}
 
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #e0e7ff;
-        }
+header p {
+    margin: 5px 0;
+    font-size: 18px;
+}
 
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+/* Sections */
+section {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-        h2 {
-            margin-bottom: 15px;
-            color: #1e3a8a;
-            border-bottom: 3px solid #2563eb;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+h2 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
+/* Card Style */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-top: 15px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+/* Skills */
+.skills li {
+    margin-bottom: 8px;
+}
 
-        ul li {
-            margin-bottom: 8px;
-        }
+/* Project card */
+.project {
+    border-left: 6px solid #4f46e5;
+}
 
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
+/* Certificate image */
+.cert-img {
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+/* Links */
+a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e3a8a;
-            color: white;
-            margin-top: 40px;
-        }
+a:hover {
+    text-decoration: underline;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+/* Footer */
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Monisha G</h1>
-    <p>Computer Science and Engineering Student | Aspiring Software Developer</p>
+    <img src="photo.jpg" alt="Monisha Photo">
+    <h1>👩‍💻 Monisha G</h1>
+    <p>🎓 Computer Science and Engineering Student</p>
+    <p>💡 Aspiring Software Developer</p>
 </header>
 
 <section>
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            I am a 2nd year Computer Science and Engineering student with strong skills in 
-            C, C++, and SQL. I am passionate about software development and problem solving. 
-            I enjoy building real-world projects and continuously improving my technical knowledge.
-        </p>
-    </div>
+<h2>🙋‍♀ About Me</h2>
+<div class="card">
+<p>
+I am a 2nd year CSE student skilled in C, C++, SQL, and HTML.  
+I enjoy building real-world projects and continuously improving my programming and problem-solving skills.
+</p>
+</div>
 </section>
 
 <section>
-    <h2>Technical Skills</h2>
-    <div class="card">
-        <ul>
-            <li>C Programming</li>
-            <li>C++ (OOP & File Handling)</li>
-            <li>SQL & Database Management</li>
-            <li>HTML Basics</li>
-            <li>Git & GitHub</li>
-            <li>Problem Solving</li>
-        </ul>
-    </div>
+<h2>🛠 Technical Skills</h2>
+<div class="card">
+<ul class="skills">
+<li>💻 C Programming</li>
+<li>🚀 C++ (OOP & File Handling)</li>
+<li>🗄 SQL & Database Basics</li>
+<li>🌐 HTML</li>
+<li>🔧 Git & GitHub</li>
+</ul>
+</div>
 </section>
 
 <section>
-    <h2>Projects</h2>
-    <div class="card">
-        <h3>Bank Management System</h3>
-        <p>
-            Developed a console-based Bank Management System using C++ and file handling.
-            Implemented account creation, deposit, withdrawal, and balance enquiry features
-            with permanent data storage using binary files.
-        </p>
-        <p>
-            🔗 GitHub: 
-            <a href="https://github.com/Monisha0503" target="_blank">
-                github.com/Monisha0503
-            </a>
-        </p>
-    </div>
+<h2>📂 Projects</h2>
+<div class="card project">
+<h3>🏦 Bank Management System</h3>
+<p>
+Developed a console-based Bank Management System using C++ and file handling.
+Implemented account creation, deposit, withdrawal, and balance enquiry features.
+</p>
+<p>
+🔗 <a href="https://github.com/Monisha0503" target="_blank">
+View Project on GitHub
+</a>
+</p>
+</div>
 </section>
 
 <section>
-    <h2>Contact</h2>
-    <div class="card">
-        <p>📧 Email: monishagnanaprakasam4@gmail.com</p>
-        <p>
-            💻 GitHub: 
-            <a href="https://github.com/Monisha0503" target="_blank">
-                github.com/Monisha0503
-            </a>
-        </p>
-        <p>
-            🔗 LinkedIn: 
-            <a href="https://www.linkedin.com/in/monisha-g-510a92376" target="_blank">
-                linkedin.com/in/monisha-g-510a92376
-            </a>
-        </p>
-    </div>
+<h2>📜 Certificates</h2>
+<div class="card">
+<h3>🐍 Basics of Python – Infosys Springboard</h3>
+
+<img src="python_certificate.jpg" class="cert-img">
+
+<p>
+📄 <a href="infoys-python.pdf" target="_blank">
+View Full Certificate (PDF)
+</a>
+</p>
+</div>
+</section>
+
+<section>
+<h2>📞 Contact</h2>
+<div class="card">
+<p>📧 Email: monishagnanaprakasam4@gmail.com</p>
+<p>💻 GitHub: 
+<a href="https://github.com/Monisha0503" target="_blank">
+github.com/Monisha0503
+</a></p>
+<p>🔗 LinkedIn: 
+<a href="https://www.linkedin.com/in/monisha-g-510a92376" target="_blank">
+View LinkedIn Profile
+</a></p>
+</div>
 </section>
 
 <footer>
-    © 2026 Monisha G | Portfolio
+<p>✨ © 2026 Monisha G | Portfolio ✨</p>
 </footer>
 
 </body>
