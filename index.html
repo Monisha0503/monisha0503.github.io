@@ -6,22 +6,37 @@
 <title>Monisha G | Portfolio</title>
 
 <style>
+
+/* Default Light Mode */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: #f4f7fb;
     color: #333;
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* Dark mode */
-.dark {
+/* Dark Mode */
+body.dark {
     background: #121212;
-    color: white;
+    color: #ffffff;
 }
 
-.dark .card {
+body.dark header {
+    background: linear-gradient(135deg, #000000, #2c2c2c);
+}
+
+body.dark .card {
     background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark a {
+    color: #90caf9;
+}
+
+body.dark footer {
+    background: #000000;
 }
 
 /* Header */
@@ -40,6 +55,20 @@ header img {
     object-fit: cover;
 }
 
+/* Dark mode button */
+.toggle-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
 /* Sections */
 section {
     max-width: 900px;
@@ -54,9 +83,14 @@ section {
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+    transition: transform 0.3s;
 }
 
-/* Button */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
 .btn {
     background: #4f46e5;
     color: white;
@@ -78,19 +112,6 @@ section {
     margin-top: 10px;
 }
 
-/* Dark mode button */
-.toggle-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: black;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -98,7 +119,9 @@ footer {
     color: white;
     padding: 15px;
 }
+
 </style>
+
 </head>
 
 <body>
@@ -122,7 +145,8 @@ footer {
 <h2>🙋‍♀ About Me</h2>
 
 <div class="card">
-I am a Computer Science and Engineering student passionate about software development and programming. I enjoy building real-world projects and improving my technical skills.
+I am a Computer Science and Engineering student skilled in C, C++, Java, HTML, CSS, and SQL.
+I am passionate about software development and building real-world projects.
 </div>
 
 </section>
@@ -132,12 +156,12 @@ I am a Computer Science and Engineering student passionate about software develo
 <h2>🛠 Technical Skills</h2>
 
 <div class="card">
-💻 C Programming<br>
-🚀 C++<br>
-☕ Java<br>
-🌐 HTML<br>
-🎨 CSS<br>
-🗄 SQL<br>
+💻 C Programming<br><br>
+🚀 C++<br><br>
+☕ Java<br><br>
+🌐 HTML<br><br>
+🎨 CSS<br><br>
+🗄 SQL<br><br>
 🔧 GitHub
 </div>
 
@@ -149,7 +173,7 @@ I am a Computer Science and Engineering student passionate about software develo
 
 <div class="card">
 
-🏦 Bank Management System
+🏦 Bank Management System using C++ and File Handling
 
 <br>
 
@@ -185,9 +209,19 @@ I am a Computer Science and Engineering student passionate about software develo
 
 <div class="card">
 
-📧 monishagnanaprakasam4@gmail.com<br>
-💻 <a href="https://github.com/Monisha0503" target="_blank">GitHub</a><br>
-🔗 <a href="https://www.linkedin.com/in/monisha-g-510a92376" target="_blank">LinkedIn</a>
+📧 Email: monishagnanaprakasam4@gmail.com<br><br>
+
+💻 GitHub:  
+<a href="https://github.com/Monisha0503" target="_blank">
+github.com/Monisha0503
+</a>
+
+<br><br>
+
+🔗 LinkedIn:  
+<a href="https://www.linkedin.com/in/monisha-g-510a92376" target="_blank">
+View LinkedIn Profile
+</a>
 
 </div>
 
@@ -200,7 +234,13 @@ I am a Computer Science and Engineering student passionate about software develo
 </footer>
 
 <script>
-/* Typing animation */
+
+/* Dark Mode Toggle */
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+
+/* Typing Animation */
 let text = "Computer Science Engineering Student | Aspiring Software Developer";
 let i = 0;
 
@@ -214,10 +254,6 @@ function typing() {
 
 typing();
 
-/* Dark mode toggle */
-function toggleDark() {
-    document.body.classList.toggle("dark");
-}
 </script>
 
 </body>
